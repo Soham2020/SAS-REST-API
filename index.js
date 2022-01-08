@@ -28,6 +28,8 @@ app.use("/api/products", productRoute)
 app.use("/api/carts", cartRoute)
 app.use("/api/orders", orderRoute)
 app.use("/api/stripe", stripeRoute)
-app.listen(5000, () => {
-    console.log("SAS-REST-API server is up on running!!");
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+    console.log(`SAS-REST-API server is up on running!! ${PORT}`);
 })
