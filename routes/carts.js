@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { verifyToken, verifyTokenAndAuthorization, verifyTokenAndAdmin } = require('../middleware/verifyToken');
+const { verifyToken, verifyTokenAndAdmin } = require('../middleware/verifyToken');
 const Cart = require('../models/Cart');
 
 // create
@@ -14,7 +14,7 @@ router.post("/", verifyToken, async(req, res) => {
 })
 
 // update a single product
-router.put("/:id", verifyTokenAndAuthorization, async(req, res) => {
+router.put("/:id", verifyToken, async(req, res) => {
     try {
         const updatedCart = await Cart.findByIdAndUpdate(req.params.id, {
             $set: req.body,
@@ -26,7 +26,7 @@ router.put("/:id", verifyTokenAndAuthorization, async(req, res) => {
 })
 
 // delete by admin only
-router.delete("/:id", verifyTokenAndAuthorization, async(req, res) => {
+router.delete("/:id", verifyToken, async(req, res) => {
     try {
         await Cart.findByIdAndDelete(req.params.id)
         res.status(200).json("Cart deleted!!");
@@ -36,7 +36,7 @@ router.delete("/:id", verifyTokenAndAuthorization, async(req, res) => {
 })
 
 // get cart by user_id
-router.get("/find/:userId", async(req, res) => {
+router.get("/find/:userId", verifyToken, async(req, res) => {
     try {
         const cart = await Cart.findOne({userId: req.params.id})
         res.status(200).json(cart);
