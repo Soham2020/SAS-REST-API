@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { verifyToken } = require('../middleware/verifyToken');
 const Feedback = require('../models/Feedback');
 
 router.post("/post", async(req, res) => {
@@ -15,4 +16,12 @@ router.post("/post", async(req, res) => {
     }
 })
 
+router.get("/get", async(req, res) => {
+    try {
+        const get = await Feedback.find();
+        res.status(201).json(get);
+    }catch(err) {
+        res.status(500).json(err);
+    }
+})
 module.exports = router;
