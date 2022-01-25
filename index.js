@@ -3,6 +3,7 @@ const app = express();
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const cors = require('cors');
+const path = require('path');
 const userRoute = require('./routes/users') 
 const authRoute = require('./middleware/auth');
 const productRoute = require('./routes/products');
@@ -21,7 +22,8 @@ mongoose
 app.use(cors());
 app.use(express.json());
 app.get("/", (req, res) => {
-    res.send("<h1>SAS-REST-API is UP, and running!</h1>")
+    // res.send("<h1>SAS-REST-API is UP, and running!</h1>")
+    res.sendFile(path.join(__dirname + '/public/index.html'));
 })
 app.use("/api/auth", authRoute)
 app.use("/api/users", userRoute)
