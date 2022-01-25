@@ -6,11 +6,12 @@
 
 body{
     height: 100vh;
-    background-color: #E0E8FD;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1),rgba(236, 236, 236, 0.678)),url('https://images.pexels.com/photos/5706273/pexels-photo-5706273.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
     background-position: center;
     background-size: cover;
 }
 
+/* navbar */
 .container{
     max-width: 1300px;
     padding: 20px 50px;
@@ -20,6 +21,7 @@ body{
 }
 .logo{
     font-size: 35px;
+    font-family: 'Raleway',sans-serif;
 }
 .navbar-menu a{
     font-size: 13px;
@@ -35,4 +37,38 @@ body{
 .navbar-menu a:hover{
     background-color: #fff;
     color: #000;
+}
+
+/* description */
+.description{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 0 70px;
+    width: 100%;
+    text-align: center;
+}
+.description h2{
+    font-size: 30px;
+    font-family: 'Great Vibes',sans-serif;
+    font-weight: 100;
+    letter-spacing: 2px;
+    line-height: 50px;
+}
+.description h1{
+    font-size: 35px;
+    font-family: 'Raleway',sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 70px;
+}
+.description p{
+    font-size: 20px;
+    font-family: 'Raleway',sans-serif;
+    font-weight: 500;
+    letter-spacing: 2px;
+    line-height: 25px;
+    margin-bottom: 30px;
 }
