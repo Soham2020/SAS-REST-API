@@ -19,6 +19,7 @@ mongoose
     .then(() => console.log("MongoDB Connetcted Successfully!!"))
     .catch((err) => console.log(err))
 
+app.use(express.static("public"));
 app.use(cors());
 app.use(express.json());
 app.get("/", (req, res) => {
