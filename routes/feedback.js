@@ -16,7 +16,7 @@ router.post("/post", async(req, res) => {
     }
 })
 
-router.get("/get", async(req, res) => {
+router.get("/get", verifyToken, async(req, res) => {
     try {
         const get = await Feedback.find();
         res.status(201).json(get);
