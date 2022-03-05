@@ -4,4 +4,3 @@ This is an open-source api and can be used in any supermarket related project as
 1. ExpressJs
 2. NodeJs
 3. MongoDB
-It will be very helpful, if you star this.
