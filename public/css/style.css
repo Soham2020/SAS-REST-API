@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     height: 100vh;
     background-image: linear-gradient(rgba(255, 255, 255, 0.1),rgba(236, 236, 236, 0.678)),url('https://images.pexels.com/photos/5706273/pexels-photo-5706273.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
     background-position: center;
@@ -12,18 +12,18 @@ body{
 }
 
 /* navbar */
-.container{
+.container {
     max-width: 1300px;
     padding: 20px 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.logo{
+.logo {
     font-size: 35px;
     font-family: 'Raleway',sans-serif;
 }
-.navbar-menu a{
+.navbar-menu a {
     font-size: 13px;
     font-family: 'Raleway',sans-serif;
     font-weight: 100;
@@ -34,13 +34,13 @@ body{
     text-decoration: none;
     transition: 0.4s;
 }  
-.navbar-menu a:hover{
+.navbar-menu a:hover {
     background-color: #fff;
     color: #000;
 }
 
 /* description */
-.description{
+.description {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -49,14 +49,14 @@ body{
     width: 100%;
     text-align: center;
 }
-.description h2{
+.description h2 {
     font-size: 30px;
     font-family: 'Great Vibes',sans-serif;
     font-weight: 100;
     letter-spacing: 2px;
     line-height: 50px;
 }
-.description h1{
+.description h1 {
     font-size: 35px;
     font-family: 'Raleway',sans-serif;
     font-weight: 700;
@@ -64,7 +64,7 @@ body{
     letter-spacing: 5px;
     line-height: 70px;
 }
-.description p{
+.description p {
     font-size: 20px;
     font-family: 'Raleway',sans-serif;
     font-weight: 500;
