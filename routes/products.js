@@ -45,7 +45,7 @@ router.get("/find/:id", async(req, res) => {
     }
 })
 // get all the products
-router.get("/", verifyToken, async(req, res) => {
+router.get("/", async(req, res) => {
     try {
         const product = await Product.find()
         res.status(200).json(product);
